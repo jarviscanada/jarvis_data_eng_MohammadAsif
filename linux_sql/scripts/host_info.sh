@@ -26,16 +26,6 @@ l2_cache=$(echo "$lscpu_out" | grep "L2 cache" | awk '{print $3}' | tr -d 'K' | 
 total_mem=$(vmstat --unit M | tail -1 | awk '{print $4}' | xargs)
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
-# Debugging outputs to ensure variables are populated
-echo "hostname=$hostname"
-echo "cpu_number=$cpu_number"
-echo "cpu_architecture=$cpu_architecture"
-echo "cpu_model=$cpu_model"
-echo "cpu_mhz=$cpu_mhz"
-echo "l2_cache=$l2_cache"
-echo "total_mem=$total_mem"
-echo "timestamp=$timestamp"
-
 # Construct the INSERT statement
 insert_stmt="INSERT INTO host_info (hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, total_mem, \"timestamp\") VALUES ('$hostname', $cpu_number, '$cpu_architecture', '$cpu_model', $cpu_mhz, $l2_cache, $total_mem, '$timestamp')"
 
