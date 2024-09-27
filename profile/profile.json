@@ -1,0 +1,107 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Fall 2021 President's List",
+        "Winter 2022 Dean's List",
+        "Fall 2023 Presidents List",
+        "Winter 2024 Dean's List"
+      ],
+      "degree": "Bachelor of Engineering (Software Engineering)",
+      "department": "Software Engineering",
+      "duration": "Sep 2019  Apr 2024",
+      "school_name": "Ontario Tech University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif",
+  "highlighted_projects": [
+    {
+      "description": "Developed an autonomous vehicle software using Python, C, ROS2, Autoware, and YOLOv5 to implement platooning and cruise control, contributing to the open-source Autonomous Vehicle Stack Autoware.",
+      "git_url": "",
+      "name": "Adaptive Cruise Control"
+    },
+    {
+      "description": "Developed a Peer-to-Peer distributed system utilizing Blockchain, Encryption, Java, and SQLite to enhance social network security, experimenting with Blockchain technology and security practices.",
+      "git_url": "",
+      "name": "P2P Social"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Implemented a solution to monitor nodes using Bash to collect various hardware data and resource usage. The data was collected and stored in a PostgreSQL server, which runs inside a Docker container. The database was updated via crontab.",
+      "git_url": "/linux_sql",
+      "name": "Linux Cluster Resource Monitoring App"
+    },
+    {
+      "description": [
+        "Twitter CRUD App: Curabitur laoreet tristique leo, eget suscipit nisi.",
+        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi.",
+        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    }
+  ],
+  "name": "Mohammad Hamza Asif",
+  "others": [
+    {
+      "bullets": [
+        "AWS Certified Cloud Practitioner",
+        "AWS Cloud Essentials"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Playing chess",
+        "Weightlifting"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Bell Mobility",
+      "description": "Worked with software development and machine learning teams to optimize accuracy in mobility predictions using C# and data science libraries like pandas and xgboost.",
+      "duration": "May 2022  Aug 2023",
+      "title": "Software Engineer Intern"
+    },
+    {
+      "company": "Jarvis",
+      "description": "Working with the software consulting team utilizing GCP, Git, Linux, Bash, and Docker to optimize and automate processes.",
+      "duration": "Sep 2024  Present",
+      "title": "Junior Software Engineer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Mobile Development",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Docker",
+      "Kubernetes"
+    ],
+    "familiar": [
+      "Hadoop",
+      "Hive",
+      "C#",
+      "PHP",
+      "Swift"
+    ],
+    "proficient": [
+      "Java",
+      "Python",
+      "C++",
+      "Bash",
+      "SQL",
+      "Agile/Scrum",
+      "AWS",
+      "Google Cloud",
+      "Git",
+      "Alteryx"
+    ]
+  },
+  "summary": "Im an Ontario Tech University Alumni with a B.Eng. Honours in Software Engineering specializing in IoT. During my studies, I gained hands-on experience as a Software Engineer Intern at Bell Mobility, where I led optimization projects and implemented automation solutions to enhance system efficiency. I worked closely on cross-functional teams to develop machine learning models that significantly improved customer acquisition strategies. My expertise includes cloud computing, data management, and AI-driven analytics, with a passion for driving innovation in large-scale automation and predictive technologies. In my free time, I enjoy playing chess and staying active by weightlifting."
+}
