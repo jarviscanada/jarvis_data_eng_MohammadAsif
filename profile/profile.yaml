@@ -39,12 +39,6 @@ jarvis_projects:
   - name: "Linux Cluster Resource Monitoring App"
     git_url: "/linux_sql"
     description: Implemented a solution to monitor nodes using Bash to collect various hardware data and resource usage. The data was collected and stored in a PostgreSQL server, which runs inside a Docker container. The database was updated via crontab.
-  - name: "Core Java Apps"
-    git_url: "/core_java"
-    description:
-      - "Twitter CRUD App: Curabitur laoreet tristique leo, eget suscipit nisi."
-      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi."
-      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi."
 
 # List of personal or academic projects
 highlighted_projects:
@@ -60,7 +54,7 @@ professional_experience:
   - title: "Software Engineer Intern"
     company: "Bell Mobility"
     duration: "May 2022  Aug 2023"
-    description: Worked with software development and machine learning teams to optimize accuracy in mobility predictions using C# and data science libraries like pandas and xgboost.
+    description: Worked with software development and machine learning teams to optimize accuracy in mobility predictions. Completed using C#, python and in-house applications for extension development and data science libraries like pandas, xgboost, numpy, Keras and Scikit-learn.
   - title: "Junior Software Engineer"
     company: "Jarvis"
     duration: "Sep 2024  Present"
