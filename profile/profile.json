@@ -2,10 +2,8 @@
   "education": [
     {
       "awards_achievements": [
-        "Fall 2021 President's List",
-        "Winter 2022 Dean's List",
-        "Fall 2023 Presidents List",
-        "Winter 2024 Dean's List"
+        "2021, 2023 President's List",
+        "2022, 2024 Dean's List"
       ],
       "degree": "Bachelor of Engineering (Software Engineering)",
       "department": "Software Engineering",
@@ -16,19 +14,19 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif",
   "highlighted_projects": [
     {
-      "description": "Developed an autonomous vehicle software using Python, C, ROS2, Autoware, and YOLOv5 to implement platooning and cruise control, contributing to the open-source Autonomous Vehicle Stack Autoware.",
+      "description": "Developed software to utilize LiDAR and depth camera sensors for mimicking adaptive cruise control functionality, including vehicle platooning (grouping) to optimize lane usage on highways and other real-road scenarios. Sensor data was processed through a computer vision model to estimate distance and classify obstacles, which was then fed into a neural network model for optimizing decision-making. The system was built on ROS2 and Autoware, leveraging a publish-subscribe (pub-sub) algorithm for inter-node communication within the simulation environment.",
       "git_url": "",
       "name": "Adaptive Cruise Control"
     },
     {
-      "description": "Developed a Peer-to-Peer distributed system utilizing Blockchain, Encryption, Java, and SQLite to enhance social network security, experimenting with Blockchain technology and security practices.",
+      "description": "A decentralized social network distributed across multiple devices using blockchain technology. This ensures content is secure, immutable, and free from centralized control. The network leverages asymmetric encryption to validate post integrity, offers true end-to-end encrypted private messaging, and ensures network availability even if individual nodes fail. Administrators can extend the platform with new features as blockchain-based blocks, allowing seamless software updates without creating separate networks. The design also decouples the network from user interfaces, enabling custom interfaces on mobile, desktop, or command line platforms.",
       "git_url": "",
       "name": "P2P Social"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Implemented a solution to monitor nodes using Bash to collect various hardware data and resource usage. The data was collected and stored in a PostgreSQL server, which runs inside a Docker container. The database was updated via crontab.",
+      "description": "Developed a solution to monitor cluster nodes by using a Bash script to collect hardware specifications and real-time resource usage data (CPU, memory, disk). The data was stored in a PostgreSQL database running in a Docker container. To ensure continuous data collection, the host usage script was automated using cron, executing every minute. This application is useful for system administrators to track and manage system performance across multiple nodes, enabling proactive maintenance and resource optimization by providing insights into hardware usage data to prevent potential bottlenecks.",
       "git_url": "/linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
     }
@@ -52,47 +50,47 @@
   ],
   "professional_experience": [
     {
-      "company": "Bell Mobility",
-      "description": "Worked with software development and machine learning teams to optimize accuracy in mobility predictions. Completed using C#, python and in-house applications for extension development and data science libraries like pandas, xgboost, numpy, Keras and Scikit-learn.",
-      "duration": "May 2022  Aug 2023",
-      "title": "Software Engineer Intern"
-    },
-    {
       "company": "Jarvis",
-      "description": "Working with the software consulting team utilizing GCP, Git, Linux, Bash, and Docker to optimize and automate processes.",
+      "description": "With the software consulting team at Jarvis, I am responsible for utilizing technologies like GCP, Git, Linux, Bash, and Docker to optimize and automate processes. I assist in developing and maintaining cloud-based infrastructure, ensuring efficient deployment pipelines, and supporting continuous integration and delivery (CI/CD) workflows.",
       "duration": "Sep 2024  Present",
       "title": "Junior Software Engineer"
+    },
+    {
+      "company": "Bell Mobility",
+      "description": "I led the research and development of optimization strategies for propagation models, significantly improving mobility prediction accuracy through analytical techniques and effective cross-functional collaboration. I developed and implemented automation tools using Alteryx, cloud computing, and Python, streamlining operations and ensuring high data integrity, which enhanced wireless network predictions. Additionally, I co-developed a machine learning model for optimizing customer acquisition strategies with predictive analytics. I also worked on various development projects, utilizing Python and C#, and collaborated closely with IT to develop and maintain automation scripts that improved overall operational efficiency.",
+      "duration": "May 2022  Aug 2023",
+      "title": "Software Engineer Intern"
     }
   ],
   "skills": {
     "competent": [
-      "Mobile Development",
-      "HTML",
-      "CSS",
+      "AWS",
+      "Google Cloud",
       "JavaScript",
       "React",
-      "Docker",
-      "Kubernetes"
+      "Mobile Development",
+      "HTML",
+      "CSS"
     ],
     "familiar": [
       "Hadoop",
       "Hive",
       "C#",
-      "PHP",
-      "Swift"
+      "Swift",
+      "PHP"
     ],
     "proficient": [
       "Java",
       "Python",
       "C++",
-      "Bash",
       "SQL",
-      "Agile/Scrum",
-      "AWS",
-      "Google Cloud",
+      "Docker",
+      "Kubernetes",
+      "Linux/Bash",
       "Git",
+      "Agile/Scrum",
       "Alteryx"
     ]
   },
-  "summary": "Im an Ontario Tech University Alumni with a B.Eng. Honours in Software Engineering specializing in IoT. During my studies, I gained hands-on experience as a Software Engineer Intern at Bell Mobility, where I led optimization projects and implemented automation solutions to enhance system efficiency. I worked closely on cross-functional teams to develop machine learning models that significantly improved customer acquisition strategies. My expertise includes cloud computing, data management, and AI-driven analytics, with a passion for driving innovation in large-scale automation and predictive technologies. In my free time, I enjoy playing chess and staying active by weightlifting."
+  "summary": "I am an Ontario Tech University alumnus with a B.Eng. (Honours) in Software Engineering. During my studies, I gained hands-on experience as a Software Engineer Intern at Bell Mobility, where I led optimization projects and implemented automation solutions to enhance system efficiency using Alteryx and cloud computing, collaborating with the IT team to schedule tasks. I worked closely with cross-functional teams, including data science, software development, and machine learning experts, to develop machine learning models that significantly improved customer acquisition strategies. My expertise spans cloud computing, data management, and AI-driven analytics, and I am passionate about driving innovation in large-scale automation and predictive technologies. In my free time, I enjoy playing chess and staying active."
 }
