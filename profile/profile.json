@@ -14,19 +14,19 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif",
   "highlighted_projects": [
     {
-      "description": "Developed software to utilize LiDAR and depth camera sensors for mimicking adaptive cruise control functionality, including vehicle platooning (grouping) to optimize lane usage on highways and other real-road scenarios. Sensor data was processed through a computer vision model to estimate distance and classify obstacles, which was then fed into a neural network model for optimizing decision-making. The system was built on ROS2 and Autoware, leveraging a publish-subscribe (pub-sub) algorithm for inter-node communication within the simulation environment.",
+      "description": "Developed software for autonomous vehicles to utilize LiDAR and depth camera sensors for mimicking adaptive cruise control functionality, including vehicle platooning (grouping) to optimize lane usage on highways and other real-road scenarios. Sensor data was processed through a computer vision model to estimate distance and classify obstacles, which was then fed into a neural network model for optimizing decision-making. The system was built on ROS2 and Autoware, leveraging a publish-subscribe (pub-sub) algorithm for inter-node communication within the simulation environment.",
       "git_url": "",
       "name": "Adaptive Cruise Control"
     },
     {
-      "description": "A decentralized social network distributed across multiple devices using blockchain technology. This ensures content is secure, immutable, and free from centralized control. The network leverages asymmetric encryption to validate post integrity, offers true end-to-end encrypted private messaging, and ensures network availability even if individual nodes fail. Administrators can extend the platform with new features as blockchain-based blocks, allowing seamless software updates without creating separate networks. The design also decouples the network from user interfaces, enabling custom interfaces on mobile, desktop, or command line platforms.",
+      "description": "A decentralized social network distributed across multiple devices using blockchain technology, ensuring content is secure, immutable, and free from centralized control. Networking within P2P Social is handled using Java NIO TCP connections. Upon starting the daemon, each node is assigned a listening socket for managing incoming connections, which allows other nodes to send updates regarding new nodes, blockchain changes, and more. The network leverages asymmetric encryption to validate post integrity and offers true end-to-end encrypted private messaging. It also ensures network availability even if individual nodes fail. Administrators can extend the platform with new features as blockchain-based blocks, allowing seamless software updates without the need to create separate networks. Additionally, the design decouples the network from user interfaces, enabling custom interfaces on mobile, desktop, or command line platforms.",
       "git_url": "",
       "name": "P2P Social"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Developed a solution to monitor cluster nodes by using a Bash script to collect hardware specifications and real-time resource usage data (CPU, memory, disk). The data was stored in a PostgreSQL database running in a Docker container. To ensure continuous data collection, the host usage script was automated using cron, executing every minute. This application is useful for system administrators to track and manage system performance across multiple nodes, enabling proactive maintenance and resource optimization by providing insights into hardware usage data to prevent potential bottlenecks.",
+      "description": "Developed a solution to monitor cluster nodes by using Bash scripts to collect hardware specifications and real-time resource usage data (CPU, memory, disk). The data was stored in a PostgreSQL database running in a Docker container. To ensure continuous data collection, the host usage script was automated using cron, executing every minute. This application is useful for system administrators to track and manage system performance across multiple nodes, enabling proactive maintenance and resource optimization by providing insights into hardware usage data to prevent potential bottlenecks.",
       "git_url": "/linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
     }
