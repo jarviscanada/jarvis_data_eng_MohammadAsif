@@ -38,7 +38,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 
 ## Miscellaneous
-- AWS Certified Cloud Practitioner
-- AWS Cloud Essentials
+- AWS Certified Cloud Practitioner (May 2024 - May 2027)
+- AWS Cloud Essentials (May 2024)
 - Playing chess
 - Weightlifting
