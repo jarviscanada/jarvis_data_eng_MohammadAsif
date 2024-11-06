@@ -1,5 +1,4 @@
 # Introduction
-Discuss the design of each app. What does the app do? What technologies have you used? (e.g. core java, libraries, lambda, IDE, docker, etc..)
 This Java application is a implementation of the [grep] command used in Linux systems utilized to search for a pattern in a group of files. The application takes three arguments:
 `regex` a regex pattern to search for within the file
 `rootDir` the root directory to direct the search for files containing the pattern
