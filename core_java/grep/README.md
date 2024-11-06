@@ -17,7 +17,7 @@ java -cp target/grep-1.0-SNAPSHOT.jar [regex], [rootDir], [outFile]
 cat [outFile]
 ```
 
-#Implemenation
+# Implemenation
 ## Pseudocode
 This application's process method highlights a high level structure for the entire program.
 ```java
