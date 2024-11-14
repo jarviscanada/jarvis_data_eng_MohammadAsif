@@ -17,6 +17,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 **Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif/tree/master/linux_sql)]: Developed a solution to monitor cluster nodes by using Bash scripts to collect hardware specifications and real-time resource usage data (CPU, memory, disk). The data was stored in a PostgreSQL database running in a Docker container. To ensure continuous data collection, the host usage script was automated using cron, executing every minute. This application is useful for system administrators to track and manage system performance across multiple nodes, enabling proactive maintenance and resource optimization by providing insights into hardware usage data to prevent potential bottlenecks.
 
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif/tree/master/core_java)]: Grep App: Developed a Java application replicating the functionality of the grep command used in Linux systems. The application scans files in a specified directory for matches to a given regex pattern and outputs these matches to an output file. To optimize memory consumption, Java Streams were utilized, enabling efficient storage of data during intermediate operations and supporting aggregate functions. The application is packaged with Maven and containerized using Docker.
+
 
 ## Highlighted Projects
 **Adaptive Cruise Control**: Developed software for autonomous vehicles to utilize LiDAR and depth camera sensors for mimicking adaptive cruise control functionality, including vehicle platooning (grouping) to optimize lane usage on highways and other real-road scenarios. Sensor data was processed through a computer vision model to estimate distance and classify obstacles, which was then fed into a neural network model for optimizing decision-making. The system was built on ROS2 and Autoware, leveraging a publish-subscribe (pub-sub) algorithm for inter-node communication within the simulation environment.
@@ -26,19 +28,19 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 ## Professional Experiences
 
-**Junior Software Engineer, Jarvis (Sep 2024  Present)**: With the software consulting team at Jarvis, I am responsible for utilizing technologies like GCP, Git, Linux, Bash, and Docker to optimize and automate processes. I assist in developing and maintaining cloud-based infrastructure, ensuring efficient deployment pipelines, and supporting continuous integration and delivery (CI/CD) workflows.
+**Junior Software Engineer, Jarvis (Sep 2024 - Present)**: With the software consulting team at Jarvis, I am responsible for utilizing technologies like GCP, Git, Linux, Bash, and Docker to optimize and automate processes. I assist in developing and maintaining cloud-based infrastructure, ensuring efficient deployment pipelines, and supporting continuous integration and delivery (CI/CD) workflows.
 
-**Software Engineer Intern, Bell Mobility (May 2022  Aug 2023)**: I led the research and development of optimization strategies for propagation models, significantly improving mobility prediction accuracy through analytical techniques and effective cross-functional collaboration. I developed and implemented automation tools using Alteryx, cloud computing, and Python, streamlining operations and ensuring high data integrity, which enhanced wireless network predictions. Additionally, I co-developed a machine learning model for optimizing customer acquisition strategies with predictive analytics. I also worked on various development projects, utilizing Python and C#, and collaborated closely with IT to develop and maintain automation scripts that improved overall operational efficiency.
+**Software Engineer Intern, Bell Mobility (May 2022 - Aug 2023)**: Led the research and development of optimization strategies for propagation models, significantly improving mobility prediction accuracy through analytical techniques and effective cross-functional collaboration. Developed and implemented automation tools using Alteryx, cloud computing, and Python, streamlining operations and ensuring high data integrity, which enhanced wireless network predictions. Co-developed a machine learning model for optimizing customer acquisition strategies with predictive analytics. Worked on various development projects, utilizing Python and C#, and collaborated closely with IT to develop and maintain automation scripts that improved overall operational efficiency.
 
 
 ## Education
-**Ontario Tech University (Sep 2019  Apr 2024)**, Bachelor of Engineering (Software Engineering), Software Engineering
+**Ontario Tech University (Sep 2019 - Apr 2024)**, Bachelor of Engineering (Software Engineering), Software Engineering
 - 2021, 2023 President's List
 - 2022, 2024 Dean's List
 
 
 ## Miscellaneous
-- AWS Certified Cloud Practitioner (May 2024 - May 2027)
-- AWS Cloud Essentials (May 2024)
+- AWS Certified Cloud Practitioner
+- AWS Cloud Essentials
 - Playing chess
 - Weightlifting

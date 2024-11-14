@@ -10,9 +10,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,6 +22,25 @@ public class JavaGrepImp implements JavaGrep {
     private String regex;
     private String rootPath;
     private String outFile;
+
+    public static void main(String[] args) {
+        if (args.length != 3) {
+            throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
+        }
+
+        BasicConfigurator.configure();
+        JavaGrepImp grep = new JavaGrepImp();
+
+        grep.setRegex(args[0]);
+        grep.setRootPath(args[1]);
+        grep.setOutFile(args[2]);
+
+        try {
+            grep.process();
+        } catch (Exception e) {
+            grep.logger.error("Error: Unable to process", e);
+        }
+    }
 
     @Override
     public void process() throws IOException {
@@ -41,7 +59,7 @@ public class JavaGrepImp implements JavaGrep {
     public List<File> listFiles(String rootDir) {
         List<File> files = new ArrayList<>();
         try {
-            Stream<Path> pathStream = Files.list(Paths.get(this.rootPath));
+            Stream<Path> pathStream = Files.walk(Paths.get(this.rootPath));
             files = pathStream.map(Path::toFile).filter(File::isFile).collect(Collectors.toList());
         } catch (IOException e) {
             this.logger.error("Error: Unable to list files", e);
@@ -53,14 +71,11 @@ public class JavaGrepImp implements JavaGrep {
     public List<String> readLines(File inputFile) throws IllegalArgumentException {
         if (!inputFile.isFile()) throw new IllegalArgumentException();
         List<String> lines = new ArrayList<>();
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(inputFile));
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
             }
-            reader.close();
         } catch (FileNotFoundException e) {
             this.logger.error("Error: File not found", e);
         } catch (IOException e) {
@@ -78,13 +93,12 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public void writeToFile(List<String> lines) throws IOException {
-        BufferedWriter writer;
-        writer = new BufferedWriter(new FileWriter("out\\" + this.outFile));
-        for (String line : lines) {
-            writer.write(line);
-            writer.newLine();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outFile))) {
+            for (String line : lines) {
+                writer.write(line);
+                writer.newLine();
+            }
         }
-        writer.close();
     }
 
     @Override
@@ -115,24 +129,5 @@ public class JavaGrepImp implements JavaGrep {
     @Override
     public void setOutFile(String outFile) {
         this.outFile = outFile;
-    }
-
-    public static void main(String[] args) {
-        if (args.length != 3) {
-            throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
-        }
-
-        BasicConfigurator.configure();
-        JavaGrepImp grep = new JavaGrepImp();
-
-        grep.setRegex(args[0]);
-        grep.setRootPath(args[1]);
-        grep.setOutFile(args[2]);
-
-        try{
-            grep.process();
-        } catch (Exception e) {
-            grep.logger.error("Error: Unable to process", e);
-        }
     }
 }
