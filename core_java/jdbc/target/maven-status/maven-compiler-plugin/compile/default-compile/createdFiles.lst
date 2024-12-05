@@ -1,0 +1,7 @@
+ca/jrvs/apps/stockquote/dao/CrudDao.class
+ca/jrvs/apps/stockquote/dao/Quote.class
+ca/jrvs/apps/stockquote/dao/PositionDao.class
+ca/jrvs/apps/stockquote/service/QuoteHttpHelper.class
+ca/jrvs/apps/stockquote/service/DatabaseConnectionManager.class
+ca/jrvs/apps/stockquote/dao/QuoteDao.class
+ca/jrvs/apps/stockquote/dao/Position.class
