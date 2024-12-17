@@ -1,7 +1,4 @@
 # Introduction
-(50-100 words)
-What does this app do? What technoglies your have used? (JDBC, PSQL, MVN, etc..)
-
 The Stock Quote Application is a Java-based program that allows users to simulate stock trading and build a portfolio using live stock data retrieved through a REST API (Alpha Vantage API). Users can view their portfolio, buy and sell stock options, and experience a realistic trading simulation without the risk of actual financial loss.
 
 # Implementaiton
