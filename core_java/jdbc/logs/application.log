@@ -1,0 +1,1025 @@
+2024-12-06 19:17:30,651 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 19:17:30,951 [main] ERROR ca.jrvs.apps.stockquote.Main - Database connection error. Verify the database is running and connection properties are correct.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:280)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:454)
+	at org.postgresql.Driver.connect(Driver.java:256)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at ca.jrvs.apps.stockquote.service.DatabaseConnectionManager.getConnection(DatabaseConnectionManager.java:20)
+	at ca.jrvs.apps.stockquote.Main.initializeApp(Main.java:52)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:39)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:70)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:91)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+	... 9 more
+2024-12-06 19:18:38,214 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 19:18:39,249 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 19:18:43,927 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-06 19:18:50,459 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:18:51,882 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:18:51,902 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:18:51,907 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,046 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:19:20,166 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:19:20,174 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,175 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,184 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,190 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,197 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:20,199 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:19:24,636 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Viewing User's Portfolio
+2024-12-06 19:19:24,637 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 19:19:24,637 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 19:19:49,017 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Viewing User's Portfolio
+2024-12-06 19:19:49,017 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 19:19:49,018 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 19:19:52,260 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Viewing User's Portfolio
+2024-12-06 19:19:52,261 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 19:19:52,261 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 19:20:07,384 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-06 19:20:10,803 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:20:10,910 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:20:10,919 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:10,920 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,746 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:20:24,839 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:20:24,844 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,848 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,849 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,850 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,860 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:24,862 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:20:57,193 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Exiting Stock Quote Application
+2024-12-06 19:20:57,193 [main] INFO  ca.jrvs.apps.stockquote.Main - Application started successfully.
+2024-12-06 19:35:29,695 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 19:35:30,574 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 19:35:34,400 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Viewing User's Portfolio
+2024-12-06 19:35:34,400 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 19:35:34,416 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 19:35:50,693 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Sell Menu
+2024-12-06 19:35:56,518 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching position for ticker: AAPL
+2024-12-06 19:35:56,520 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.fetchPosition(PositionService.java:80)
+	at ca.jrvs.apps.stockquote.StockQuoteController.sellMenu(StockQuoteController.java:108)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:42)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:36:08,543 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-06 19:36:11,698 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:36:12,894 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:36:12,894 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:36:12,902 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:57,651 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 19:37:57,992 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 19:37:57,992 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:57,997 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:58,001 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:58,005 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:58,008 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 19:37:58,009 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:35,622 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 20:57:36,504 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 20:57:39,239 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-06 20:57:42,425 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 20:57:43,832 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 20:57:43,853 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:71)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:43,859 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:71)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:50,869 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 20:57:50,981 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 20:57:50,982 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:50,991 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:50,994 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:50,997 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:50,999 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:57:51,001 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:132)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:82)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:37)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:58:31,850 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 20:58:32,706 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 20:58:39,017 [main] INFO  infoLogger - User navigated to buy menu.
+2024-12-06 20:58:47,434 [main] INFO  infoLogger - User asked to fetch quote for aapl
+2024-12-06 20:58:47,436 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: aapl from API
+2024-12-06 20:58:48,535 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 20:58:48,543 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:58:48,546 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:59:02,357 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 20:59:02,466 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 20:59:02,466 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:172)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:59:02,469 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:172)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:59:02,473 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:172)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:59:02,482 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:172)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 20:59:02,484 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:172)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:03:40,769 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 21:03:41,677 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 21:03:47,393 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - User selected to view portfolio.
+2024-12-06 21:03:47,394 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 21:03:47,405 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 21:04:12,070 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Navigating to Buy Stock menu.
+2024-12-06 21:04:22,248 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: msft from API
+2024-12-06 21:04:23,332 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'MSFT' found. Saving to the database.
+2024-12-06 21:04:23,333 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker MSFT
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:23,344 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,618 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: MSFT from API
+2024-12-06 21:04:36,734 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'MSFT' found. Saving to the database.
+2024-12-06 21:04:36,735 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker MSFT
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,737 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,741 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: MSFT
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,749 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,751 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: MSFT
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:36,753 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - Error fetching stock data for ticker: msft
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:04:43,064 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Returning to main menu from Buy Menu.
+2024-12-06 21:04:44,900 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - User selected to view portfolio.
+2024-12-06 21:04:44,900 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 21:04:44,900 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 21:24:04,385 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-06 21:24:05,286 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-06 21:24:07,379 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Navigating to Buy Stock menu.
+2024-12-06 21:24:12,516 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: aapl from API
+2024-12-06 21:24:14,242 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 21:24:14,283 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:14,302 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,118 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 21:24:22,220 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 21:24:22,221 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,223 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,225 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,233 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,236 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:24:22,238 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - Error fetching stock data for ticker: aapl
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:04,159 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: aapl from API
+2024-12-06 21:25:04,283 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 21:25:04,283 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:04,287 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:83)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,239 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-06 21:25:10,354 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-06 21:25:10,355 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,356 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,358 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,359 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,360 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:25:10,362 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - Error fetching stock data for ticker: aapl
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processStockPurchase(StockQuoteController.java:117)
+	at ca.jrvs.apps.stockquote.StockQuoteController.confirmPurchase(StockQuoteController.java:103)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openBuyMenu(StockQuoteController.java:85)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:40)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:26:06,085 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Returning to main menu from Buy Menu.
+2024-12-06 21:26:08,239 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - User selected to view portfolio.
+2024-12-06 21:26:08,240 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 21:26:08,241 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-06 21:26:12,704 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Navigating to Sell Stock menu.
+2024-12-06 21:26:16,876 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching position for ticker: AAPL
+2024-12-06 21:26:16,877 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.fetchPosition(PositionService.java:80)
+	at ca.jrvs.apps.stockquote.StockQuoteController.openSellMenu(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:44)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-06 21:26:54,498 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Returning to main menu from Sell Menu.
+2024-12-06 21:27:52,996 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - User selected to view portfolio.
+2024-12-06 21:27:52,997 [main] INFO  ca.jrvs.apps.stockquote.service.PositionService - Fetching all stock positions.
+2024-12-06 21:27:52,997 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not complete request: Find All Entities
+2024-12-09 14:55:25,832 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: src/main/resources/properties.txt
+2024-12-09 14:55:26,745 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-09 14:55:28,822 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-09 14:55:31,245 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-09 14:55:32,549 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-09 14:55:32,568 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:32,573 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,252 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-09 14:55:40,412 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-09 14:55:40,412 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,414 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,428 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,430 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,431 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:55:40,434 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 14:56:06,180 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Exiting Stock Quote Application
+2024-12-09 14:56:06,181 [main] INFO  ca.jrvs.apps.stockquote.Main - Application started successfully.
+2024-12-09 16:06:28,432 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: /properties.txt
+2024-12-09 16:06:29,365 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-09 16:06:32,074 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Exiting Stock Quote Application
+2024-12-09 16:06:32,075 [main] INFO  ca.jrvs.apps.stockquote.Main - Application started successfully.
+2024-12-09 21:24:22,067 [main] INFO  ca.jrvs.apps.stockquote.Main - Loaded properties from file: /properties.txt
+2024-12-09 21:24:22,951 [main] INFO  ca.jrvs.apps.stockquote.Main - App resources initialized successfully.
+2024-12-09 21:24:25,071 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Starting Stock Quote Application Purchase Menu
+2024-12-09 21:24:30,218 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-09 21:24:31,578 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-09 21:24:31,592 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:31,603 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:77)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:37,979 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Fetching quote data for ticker: AAPL from API
+2024-12-09 21:24:38,076 [main] INFO  ca.jrvs.apps.stockquote.service.QuoteService - Ticker 'AAPL' found. Saving to the database.
+2024-12-09 21:24:38,076 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - Could not retrieve quote from ticker AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.findById(QuoteDao.java:81)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:36)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:38,085 [main] ERROR ca.jrvs.apps.stockquote.dao.QuoteDao - UPDATE Statement failure for provided entity
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.QuoteDao.save(QuoteDao.java:56)
+	at ca.jrvs.apps.stockquote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:38)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:33)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:38,091 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:37)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:38,096 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not INSERT position
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.save(PositionDao.java:39)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:45)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:38,099 [main] ERROR ca.jrvs.apps.stockquote.dao.PositionDao - Could not retrieve position with id: AAPL
+org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:783)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:1680)
+	at org.postgresql.jdbc.PgConnection.prepareStatement(PgConnection.java:371)
+	at ca.jrvs.apps.stockquote.dao.PositionDao.findById(PositionDao.java:69)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:38,101 [main] ERROR ca.jrvs.apps.stockquote.StockQuoteController - An unexpected error occurred during the buy operation.
+java.lang.IllegalStateException: Failed to fetch updated position from database.
+	at ca.jrvs.apps.stockquote.service.PositionService.lambda$buy$1(PositionService.java:48)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at ca.jrvs.apps.stockquote.service.PositionService.buy(PositionService.java:47)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:90)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:38)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:42)
+2024-12-09 21:24:41,000 [main] INFO  ca.jrvs.apps.stockquote.StockQuoteController - Exiting Stock Quote Application
+2024-12-09 21:24:41,000 [main] INFO  ca.jrvs.apps.stockquote.Main - Application started successfully.

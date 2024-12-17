@@ -9,8 +9,8 @@ import ca.jrvs.apps.stockquote.service.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Load application properties
-            Properties appProperties = loadProperties("src/main/resources/properties.txt");
+            Properties appProperties = loadProperties("/properties.txt");
 
             // Initialize database connection
             DatabaseConnectionManager dcm = new DatabaseConnectionManager(
@@ -64,8 +64,11 @@ public class Main {
 
     private static Properties loadProperties(String filePath) throws IOException {
         Properties properties = new Properties();
-        try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
-            properties.load(fileInputStream);
+        try (InputStream inputStream = Main.class.getResourceAsStream(filePath)) {
+            if (inputStream == null) {
+                throw new IOException("Properties file not found: " + filePath);
+            }
+            properties.load(inputStream);
             logger.info("Loaded properties from file: {}", filePath);
         }
         return properties;

@@ -15,9 +15,9 @@ import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 
 public class QuoteHttpHelper {
-    private final String apiKey = System.getenv("ALPHA_V_KEY");
+    private final String apiKey = System.getenv("ALPHA_V_KEY");;
     private final OkHttpClient httpClient = new OkHttpClient();
-    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
+    final Logger logger = LoggerFactory.getLogger("logger");
 
     /**
      * Fetch latest quote data from Alpha Vantage endpoint
@@ -58,7 +58,7 @@ public class QuoteHttpHelper {
             quote.setTimestamp(quoteTimestamp());
 
         } catch (IOException e) {
-            errorLogger.error("Error fetching quote info for symbol: " + symbol, e);
+            logger.error("Error fetching quote info for symbol: " + symbol, e);
             throw new RuntimeException("Failed to fetch data from API", e);
         }
 
