@@ -3,7 +3,7 @@ This project is a proof of concept (PoC) for London Gift Shop (LGS), a UK-based 
 stagnant revenue growth, LGS seeks to leverage data analytics to understand customer behavior and improve 
 marketing strategies. This project delivers insights to support targeted campaigns and boost sales.
 
-# Implementaion
+# Implementation
 
 ## Project Architecture
 London Gift Shop's web app runs on a Microsoft Azure resource group, with Azure CDN for the front end and
