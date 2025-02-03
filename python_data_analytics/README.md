@@ -18,13 +18,12 @@ This sample data was stored in a separate PSQL database, with analysis conducted
 ## Data Analytics and Wrangling
 [Jupyter Notebook](./retail_data_analytics_wrangling.ipynb)
 
-Within this PoC the analysis to aid LGS with their stagnant revenue growth analysis was performed on the following:
-- Monthly Changes [Customer growth, Orders, Sales Growth]
-- Users Activity Changes
-- User Classification (RFM Segmentation)
+Within this PoC, the analysis to help LGS address stagnant revenue growth was performed on the following:
+- Monthly changes (customer growth, orders, sales growth)
+- User activity trends
+- User classification (RFM segmentation)
 
-With the following measures LGS can look into specific periods to understand the impact of their campaigns
-as well as look into specific classes of customers to understand their behaviour and push targeted ads.  
+These measures enable LGS to examine specific periods to assess campaign impact and analyze customer segments to understand behavior and optimize targeted advertising.
 
 # Improvements
 - Perform CLV Segmentation (Customer Lifetime Value): to predict future revenue from consumers and target.
