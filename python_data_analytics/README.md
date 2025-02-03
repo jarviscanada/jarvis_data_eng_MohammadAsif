@@ -22,6 +22,7 @@ Within this PoC the analysis to aid LGS with their stagnant revenue growth analy
 - Monthly Changes [Customer growth, Orders, Sales Growth]
 - Users Activity Changes
 - User Classification (RFM Segmentation)
+
 With the following measures LGS can look into specific periods to understand the impact of their campaigns
 as well as look into specific classes of customers to understand their behaviour and push targeted ads.  
 
