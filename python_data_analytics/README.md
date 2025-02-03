@@ -16,7 +16,7 @@ This sample data was stored in a separate PSQL database, with analysis conducted
 
 
 ## Data Analytics and Wrangling
-Jupyter notebook (`./retail_data_analytics_wrangling.ipynb`)
+[Jupyter Notebook](/retail_data_analytics_wrangling.ipynb)
 
 Within this PoC the analysis to aid LGS with their stagnant revenue growth analysis was performed on the following:
 - Monthly Changes [Customer growth, Orders, Sales Growth]
