@@ -1,4 +1,4 @@
-Table of contents
+# Table of contents
 * [Introduction](#Introduction)
 * [Hadoop Cluster](#Hadoop-Cluster)
 * [Hive Project](#Hive-Project)
