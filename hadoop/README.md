@@ -13,7 +13,9 @@ solution enables scalable data processing and real-time analytics, making it sui
 
 # Hadoop-Cluster
 Cluster architecture diagram:
+
 ![image](https://github.com/user-attachments/assets/ec0dc1c5-fdef-4d7a-9391-c3220a973c53)
+
 Hardware specifications (3 node hadoop cluster):
 - Cluster mode: Standard (1 master, 2 workers)
 - Master node:
@@ -32,6 +34,7 @@ Hardware specifications (3 node hadoop cluster):
 - Implemented partitioning and bucketing to improve query execution speed.
 - Used ORC file format for efficient storage and columnar access.
 - Tuned Hive queries for better performance.
+
 ![image](https://github.com/user-attachments/assets/e74d3bf7-5e70-4022-b13e-8440e5e0400b)
 
 # Improvements
