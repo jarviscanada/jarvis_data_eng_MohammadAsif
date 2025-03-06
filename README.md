@@ -4,11 +4,11 @@ I am an Ontario Tech University alumnus with a B.Eng. (Honours) in Software Engi
 
 ## Skills
 
-**Proficient:** Java, Python, C++, SQL, Docker, Kubernetes, Linux/Bash, Git, Agile/Scrum, Alteryx
+**Proficient:** Java, Python, C++, SQL, Linux/Bash, Docker, Kubernetes, Git, Agile/Scrum, Alteryx
 
-**Competent:** AWS, Google Cloud, JavaScript, React, Mobile Development, HTML, CSS
+**Competent:** AWS, Google Cloud, Hadoop, Hive, JavaScript, React, Mobile Development
 
-**Familiar:** Hadoop, Hive, C#, Swift, PHP
+**Familiar:** Spark C#, Swift, PHP, HTML, CSS
 
 ## Jarvis Projects
 
