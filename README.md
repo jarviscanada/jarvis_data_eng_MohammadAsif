@@ -6,9 +6,9 @@ I am an Ontario Tech University alumnus with a B.Eng. (Honours) in Software Engi
 
 **Proficient:** Java, Python, C++, SQL, Linux/Bash, Docker, Kubernetes, Git, Maven Agile/Scrum, Alteryx
 
-**Competent:** AWS, Google Cloud, Hadoop, Hive, JavaScript, React, Mobile Development
+**Competent:** AWS, Google Cloud, Spark, Hadoop, Hive, JavaScript, React
 
-**Familiar:** Spark, C#, Swift, PHP, HTML, CSS
+**Familiar:** C#, Swift, PHP, HTML, CSS, Mobile Development
 
 ## Jarvis Projects
 
@@ -33,7 +33,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 ## Professional Experiences
 
-**Junior Software Engineer, Jarvis (Sep 2024 - Present)**: With the software consulting team at Jarvis, I am responsible for utilizing technologies like GCP, Git, Linux, Bash, and Docker to optimize and automate processes. I assist in developing and maintaining cloud-based infrastructure, ensuring efficient deployment pipelines, and supporting continuous integration and delivery (CI/CD) workflows.
+**Junior Software Engineer, Jarvis (Sep 2024 - Present)**: Led the development and optimization of data pipelines using Apache Spark and Google Cloud Platform (GCP), ensuring efficient data processing and high data integrity. Implemented scalable ETL solutions to manage large datasets, collaborating with cross-functional teams to drive business insights. Developed and maintained cloud-based data storage solutions using PostgreSQL and Hive, applying data manipulation techniques for enhanced query performance. Automated data workflows and containerized applications using Docker, streamlining operational processes and ensuring seamless data deployment. Monitored cluster performance and implemented proactive solutions to minimize downtime. Delivered actionable insights by leveraging Spark SQL for large-scale data analysis, contributing to data-driven decision-making across the organization.
 
 **Software Engineer Intern, Bell Mobility (May 2022 - Aug 2023)**: Led the research and development of optimization strategies for propagation models, significantly improving mobility prediction accuracy through analytical techniques and effective cross-functional collaboration. Developed and implemented automation tools using Alteryx, cloud computing, and Python, streamlining operations and ensuring high data integrity, which enhanced wireless network predictions. Co-developed a machine learning model for optimizing customer acquisition strategies with predictive analytics. Worked on various development projects, utilizing Python and C#, and collaborated closely with IT to develop and maintain automation scripts that improved overall operational efficiency.
 
