@@ -37,6 +37,8 @@ Hive Metastore: Databricks integrates with the Hive Metastore for data catalogin
 
 Architecture Diagram:
 
+![image](https://github.com/user-attachments/assets/d595edb4-f85d-49cd-9591-4fa224e67a9e)
+
 # Zeppelin-and-Hadoop-Implementation
 Utilized wdi_2016 dataset to run analysis on GDP and other metrics related to countries 
 
