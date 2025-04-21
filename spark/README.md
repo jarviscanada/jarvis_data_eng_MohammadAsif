@@ -3,7 +3,7 @@
 * [Databrick and Hadoop Implementation](#Databricks-and-Hadoop-Implementation)
 * [Zeppelin and Hadoop Implementation](#Zeppelin-and-Hadoop-Implementation)
 * [Improvements](#Improvements)
-* 
+
 # Introduction
 I worked on a proof of concept (PoC) for London Gift Shop, a UK-based online retailer, aimed at 
 leveraging data analytics to better understand customer behavior and improve marketing strategies.
@@ -20,8 +20,8 @@ interactively.
 - Hadoop HDFS integration for distributed data storage (set up within a dataproc cluster gcp).
 
 # Databricks-and-Hadoop-Implementation
-[Spark Notebook](./notebook/PySpark Data Analytics and Wrangling.ipynb)
-[Scala Notebook](./notebook/Scala Data Analytics and Data Wrangling.ipynb)
+[Spark Notebook](./notebook/PySpark%20Data%20Analytics%20and%20Wrangling.ipynb)
+[Scala Notebook](./notebook/Scala%20Data%20Analytics%20and%20Data%20Wrangling.ipynb)
 ## Dataset and Analytics
 This implementation processes retail transaction data using Spark/Scala DataFrames and SQL queries 
 within the Databricks ecosystem, enabling ETL operations and generating behavioral visualizations.
@@ -38,8 +38,12 @@ Hive Metastore: Databricks integrates with the Hive Metastore for data catalogin
 Architecture Diagram:
 
 # Zeppelin-and-Hadoop-Implementation
-- Describe the dataset and your analytics work (make sure you create a link to your ipynb)
-## Architecture Details (e.g. Zeppelin, GCP, Hadoop, Hive Metastore, PySpark, data flow, etc..)
+Utilized wdi_2016 dataset to run analysis on GDP and other metrics related to countries 
+
+## Architecture Details
+Implemented a Hive-based data processing pipeline on a Dataproc cluster with Zeppelin as the 
+primary interactive interface. Utilized Spark SQL to run some analytics on the existing 
+parquet file related to the previous hadoop project.
 
 Cluster Architecture Diagram:
 
