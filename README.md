@@ -6,9 +6,9 @@ I am an Ontario Tech University alumnus with a B.Eng. (Honours) in Software Engi
 
 **Proficient:** Java, Python, C++, SQL, Docker, Kubernetes, Git, Maven, Agile/Scrum, Alteryx
 
-**Competent:** AWS, Google Cloud, Spark, Hadoop, Hive, JavaScript, React
+**Competent:** AWS, Google Cloud, Spark, Hadoop, Hive, Scala, JavaScript, React
 
-**Familiar:** C#, Scala, Swift, PHP, HTML, CSS, Mobile Development
+**Familiar:** C#, Swift, PHP, HTML, CSS, Mobile Development
 
 ## Jarvis Projects
 
@@ -25,6 +25,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif/tree/master/python_data_anlytics)]: Developed a PoC for a UK-based online giftware retailer, London Gift Shop (LGS), using Python, Pandas, NumPy, and Matplotlib to analyze historical data. Identified sales trends, customer behavior, and seasonal patterns through data wrangling. Implemented RFM segmentation to enhance targeted marketing and optimize revenue growth. Performed cohort analysis to track customer retention over time. Visualized key insights using Matplotlib to support data-driven decision-making.
 
 **Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif/tree/master/hadoop)]: Developed a big data processing solution using Google Cloud Platform (GCP) Dataproc to analyze large datasets efficiently. The project leveraged Apache Zeppelin as an interactive data analytics environment and utilized the Hive interpreter for SQL-based querying on distributed data. This solution enables scalable data processing and real-time analytics, making it suitable for enterprise-level big data applications.
+
+**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MohammadAsif/tree/master/spark)]: Developed a PoC for London Gift Shop (LGS), a UK-based online giftware retailer, using Scala and Apache Spark on Databricks to analyze large-scale transactional data. Leveraged Zeppelin notebooks, DBFS, and HDFS for scalable data processing and storage. Cleaned and wrangled SQL-based records to ensure consistency and accuracy. Performed EDA to uncover sales trends, regional buying patterns, and product popularity. Implemented RFM segmentation to categorize customers for targeted marketing strategies. Documented insights through interactive notebooks to support LGSs data-driven decision-making.
 
 
 ## Highlighted Projects
