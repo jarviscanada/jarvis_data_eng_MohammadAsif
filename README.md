@@ -37,7 +37,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 ## Professional Experiences
 
-**Junior Software Engineer, Jarvis (Sep 2024 - Present)**: Led the development and optimization of data pipelines using Apache Spark and Google Cloud Platform (GCP), ensuring efficient data processing and high data integrity. Implemented scalable ETL solutions to manage large datasets, collaborating with cross-functional teams to drive business insights. Developed and maintained cloud-based data storage solutions using PostgreSQL and Hive, applying data manipulation techniques for enhanced query performance. Automated data workflows and containerized applications using Docker, streamlining operational processes and ensuring seamless data deployment. Monitored cluster performance and implemented proactive solutions to minimize downtime. Delivered actionable insights by leveraging Spark SQL for large-scale data analysis, contributing to data-driven decision-making across the organization.
+**Junior Data Engineer, Jarvis (May 2025 - Present)**: Led the design and migration of secure data architectures within the banking sector, optimizing data governance through Databricks Unity Catalog and fine-grained access control models. Orchestrated and automated Databricks Jobs to schedule, monitor, and optimize complex data workflows, ensuring reliability and scalability across cloud environments. Collaborated with cross-functional teams to evaluate and document access control frameworks, driving compliance and policy standardization across the platform. Implemented automation strategies to streamline data ingestion and job execution, reducing manual overhead and improving operational efficiency. Contributed to cloud-based data management initiatives leveraging Databricks, SQL, and Azure, enabling consistent and auditable data pipelines for enterprise analytics.
+
+**Junior Software Engineer, Jarvis (Sep 2024 - May 2025)**: Led the development and optimization of data pipelines using Apache Spark and Google Cloud Platform (GCP), ensuring efficient data processing and high data integrity. Implemented scalable ETL solutions to manage large datasets, collaborating with cross-functional teams to drive business insights. Developed and maintained cloud-based data storage solutions using PostgreSQL and Hive, applying data manipulation techniques for enhanced query performance. Automated data workflows and containerized applications using Docker, streamlining operational processes and ensuring seamless data deployment. Monitored cluster performance and implemented proactive solutions to minimize downtime. Delivered actionable insights by leveraging Spark SQL for large-scale data analysis, contributing to data-driven decision-making across the organization.
 
 **Software Engineer Intern, Bell Mobility (May 2022 - Aug 2023)**: Led the research and development of optimization strategies for propagation models, significantly improving mobility prediction accuracy through analytical techniques and effective cross-functional collaboration. Developed and implemented automation tools using Alteryx, cloud computing, and Python, streamlining operations and ensuring high data integrity, which enhanced wireless network predictions. Co-developed a machine learning model for optimizing customer acquisition strategies with predictive analytics. Worked on various development projects, utilizing Python and C#, and collaborated closely with IT to develop and maintain automation scripts that improved overall operational efficiency.
 
@@ -49,6 +51,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MohammadAs
 
 
 ## Miscellaneous
+- Databricks Certified Data Engineer Professional
+- Databricks Certified Data Engineer Associate
+- Microsoft Certified Azure Fundementals
 - AWS Certified Cloud Practitioner
 - AWS Cloud Essentials
 - Playing chess
